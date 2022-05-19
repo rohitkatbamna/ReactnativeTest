@@ -1,16 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Button } from "react-native-web";
+import { StyleSheet, Text, View, Button } from "react-native";
 
 export default function App() {
 	const [counter, setCounter] = useState(0);
 	return (
 		<View style={styles.container}>
-			<Text style={{ textAlign: "center", fontSize: "50px" }}>
-				Counter: {counter}
-			</Text>
+			<Text style={{ textAlign: "center" }}>Counter: {counter}</Text>
 			<Button
+				title="one two"
 				onPress={() => {
 					setCounter((prev) => prev + 1);
 				}}
@@ -23,6 +21,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: "#fff",
-		textAlign: "center",
+		justifyContent: "center",
 	},
 });
